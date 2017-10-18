@@ -33,3 +33,29 @@ Route::get('/cart/show', [
     'uses' => 'CartController@showCart',
     'as'=> 'cart.show'
     ]);
+    
+
+Route::get('/cart/addqt/{id}', [
+    'uses' => 'CartController@addQtCart',
+    'as'=> 'cart.addqt'
+    ]);
+    
+
+Route::get('/cart/remove/{id}', [
+    'uses' => 'CartController@removeCart',
+    'as'=> 'cart.remove'
+    ]);
+    
+
+Route::get('/cart/removethis/{id}', [
+    'uses' => 'CartController@removethisCart',
+    'as'=> 'cart.removethis'
+    ]);
+    
+
+Route::get('/cart/removeall/', [
+    'uses' => 'CartController@removeallCart',
+    'as'=> 'cart.removeall'
+    ]);
+    
+
