@@ -23,3 +23,13 @@ Route::post('/signup', [
     'uses' => 'UserController@postSignup',
     'as'=> 'user.signup'
     ]);
+
+Route::get('/add/{id}', [
+    'uses' => 'CartController@addCart',
+    'as'=> 'cart.add'
+    ]);
+
+Route::get('/cart/show', [
+    'uses' => 'CartController@showCart',
+    'as'=> 'cart.show'
+    ]);

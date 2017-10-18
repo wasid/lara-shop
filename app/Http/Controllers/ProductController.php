@@ -6,13 +6,17 @@ use Illuminate\Http\Request;
 
 use App\Product;
 
+use Cart;
+
 class ProductController extends Controller
 {
     public function getIndex(){
         
         $products = Product::all();
         
-        return view('shop.index', ['products' => $products]);
+        $cart = Cart::count();
+        
+        return view('shop.index',  compact('products', 'cart'));
         
     }
     public function getSignup(){

@@ -5,6 +5,15 @@ Lara Shop
 @endsection
 
 @section('content')
+    <p><a href="{{ route('cart.show') }}" class="btn btn-success float-right" role="button">Total Item <span class="badge">
+        
+          @if(count($cart) > 0)
+            {{$cart}}
+          @else
+            0
+          @endif
+
+      </span></a></p>
     @foreach($products->chunk(3) as $productChunk)
         <div class="row">
         @foreach($productChunk as $product)
@@ -15,7 +24,7 @@ Lara Shop
                 <h3>{{ $product->title }}</h3>
                 <h4>${{ $product->price}}</h4>
                 <p>{{ $product->description }}</p>
-                <p><a href="#" class="btn btn-primary float-right" role="button">Add to Cart</a></p>
+                <p><a href="{{ route('cart.add', ['id' => $product->id]) }}" class="btn btn-primary float-right" role="button">Add to Cart</a></p>
               </div>
             </div>
         </div>
