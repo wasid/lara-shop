@@ -16,7 +16,9 @@ class CartController extends Controller
         
         $totalcart = Cart::content();
         
-        return view('shop.cart',  compact('totalcart'));
+        $totalprice = Cart::subtotal();
+        
+        return view('shop.cart',  compact('totalcart', 'totalprice'));
     }
 
 
@@ -70,5 +72,14 @@ class CartController extends Controller
         Cart::destroy();
         
         return redirect()->route('shop.index');
+    }
+    
+    public function checkoutCart()
+    {
+        $allcheckout = Cart::content();
+        
+        $totalcheckout = Cart::subtotal();
+        
+        return view('shop.checkout', compact('allcheckout', 'totalcheckout'));
     }
 }

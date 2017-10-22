@@ -62,5 +62,11 @@ Route::get('/cart/removeall/', [
     'uses' => 'CartController@removeallCart',
     'as'=> 'cart.removeall'
     ]);
+        
+// remove all items from cart
+Route::get('/cart/checkout/', [
+    'uses' => 'CartController@checkoutCart',
+    'as'=> 'cart.checkout'
+    ]);
     
 

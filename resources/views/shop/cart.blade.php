@@ -27,4 +27,11 @@ Total Cart
         </div>
        @endforeach
        </div>
+       
+       @if($totalprice > 0)
+        <div class="text-center col-md-4 col-md-offset-4">
+          <h3 class="alert alert-info">Total Price: {{$totalprice}}</h3>
+          <a href="{{route('cart.checkout')}}"><button  class="btn btn-primary">Checkout</button></a>
+        </div>
+       @endif       
 @endsection
