@@ -9,9 +9,9 @@ Checkout
       <form class="form-horizontal" method="post" action="">
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-md-push-6 col-sm-push-6">
           <!--REVIEW ORDER-->
-          <div class="panel panel-primary">
+          <div class="panel panel-default">
               <div class="panel-heading">
-                  Review Order <div class="pull-right"><small><a class="afix-1" href="#">Edit Cart</a></small></div>
+                  Review Order
               </div>
               <div class="panel-body">
                   @foreach($allcheckout as $product)
@@ -43,7 +43,7 @@ Checkout
       </div>
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-md-pull-6 col-sm-pull-6">
           <!--SHIPPING METHOD-->
-          <div class="panel panel-primary">
+          <div class="panel panel-default">
               <div class="panel-heading">Address</div>
               <div class="panel-body">
                   <div class="form-group">
@@ -104,7 +104,7 @@ Checkout
           </div>
           <!--SHIPPING METHOD END-->
           <!--CREDIT CART PAYMENT-->
-          <div class="panel panel-primary">
+          <div class="panel panel-default">
               <div class="panel-heading"><span><i class="glyphicon glyphicon-lock"></i></span> Secure Payment</div>
               <div class="panel-body">
                   <div class="form-group">

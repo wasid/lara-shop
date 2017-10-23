@@ -69,7 +69,10 @@ input::-webkit-input-placeholder {
 }
 
 
-
+.panel .panel-heading{
+	background-color: #272727;
+	color: #fff;
+}
 
 
 /*Cards images*/
