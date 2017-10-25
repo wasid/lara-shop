@@ -11,7 +11,7 @@ Total Cart
         @foreach($totalcart as $product)
           <div class="col-sm-6 col-md-4">
             <div class="thumbnail cartimg">
-              <!--<img src="{{ $product->imgPath }}" alt="..." class="img-reponsive">-->
+              <img src="{{ $product->options->image }}" alt="..." class="img-reponsive">
               <div class="caption text-center">
                 <h3>{{ $product->name }}</h3>
                 <h4>Quantity: {{ $product->qty}}</h4>

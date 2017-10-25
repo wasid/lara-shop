@@ -31,8 +31,9 @@ class CartController extends Controller
             'name' => $products->title,
             'qty' => 1,
             'price' => $products->price,
+            'options' => ['image' => $products->imgPath]
             ]);
-
+            
         return redirect()->route('shop.index');
         
         
